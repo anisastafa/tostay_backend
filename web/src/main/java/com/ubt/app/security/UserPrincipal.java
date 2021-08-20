@@ -1,0 +1,68 @@
+package com.ubt.app.security;
+
+import com.ubt.model.User;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.Collection;
+import java.util.Collections;
+import java.util.EnumSet;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import static com.ubt.app.security.ApplicationUserRole.HOST;
+import static com.ubt.app.security.ApplicationUserRole.USER;
+
+public class UserPrincipal implements UserDetails {
+
+    private final User user;
+
+    public UserPrincipal(User user) {
+        super();
+        this.user = user;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        System.out.println("user.name() --- :" + USER.name());
+        System.out.println("user.getPermissions() == :" + USER.getPermissions());
+
+//        Set<ApplicationUserRole> roles = EnumSet.noneOf(ApplicationUserRole.class);
+//        roles.add(USER);
+//        return roles;
+        return Collections.singleton(new SimpleGrantedAuthority("ROLE_"+USER.name()));
+//            return AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_"+USER.name());
+    }
+
+    @Override
+    public String getPassword() {
+        return user.getPassword();
+    }
+
+    @Override
+    public String getUsername() {
+        return user.getUsername();
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+}

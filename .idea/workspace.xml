@@ -1,71 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad91c44d-8b7e-469b-83fc-76128ec7b9d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_modelmapper_modelmapper_2_4_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/main/java/com/ubt/model/dto/ApartmentLocationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/domain/domain.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/ubt/model/Apartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/ubt/model/Apartment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/ubt/model/Booking.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/ubt/model/Booking.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/ubt/model/Host.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/ubt/model/Host.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/ubt/model/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/ubt/model/Media.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/ubt/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/ubt/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/ubt/model/View.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/ubt/model/Apartment.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/ubt/model/Apartment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/ubt/model/Booking.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/ubt/model/Booking.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/ubt/model/Host.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/ubt/model/Host.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/ubt/model/Media.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/ubt/model/Media.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/ubt/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/ubt/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/ubt/model/View$FileInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/ubt/model/View.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/repository.iml" beforeDir="false" afterPath="$PROJECT_DIR$/repository/repository.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/src/main/java/com/ubt/repository/ApartmentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/repository/src/main/java/com/ubt/repository/ApartmentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/src/main/java/com/ubt/repository/MediaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/repository/src/main/java/com/ubt/repository/MediaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/service/service.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ubt/service/ApartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ubt/service/ApartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ubt/service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ubt/service/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ubt/service/HostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ubt/service/HostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ubt/service/MediaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ubt/service/MediaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/src/main/java/com/ubt/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/service/src/main/java/com/ubt/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/ubt/service/ApartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/ubt/service/ApartmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/ubt/service/BookingService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/ubt/service/BookingService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/ubt/service/HostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/ubt/service/HostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/ubt/service/MediaService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/ubt/service/MediaService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/target/classes/com/ubt/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/service/target/classes/com/ubt/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tostay_backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tostay_backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/UserDetails/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/UserDetails/MyUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/controllers/ApartmentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/controllers/ApartmentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/controllers/BookingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/controllers/BookingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/controllers/HostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/controllers/HostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/controllers/MediaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/controllers/MediaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/controllers/OpenRequestsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/controllers/OpenRequestsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/jwt/JwtTokenVerifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/jwt/JwtTokenVerifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/jwt/JwtUsernameAndPasswordAuthAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/jwt/JwtUsernameAndPasswordAuthAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/security/AppSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/security/AppSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/security/AuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/security/AuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/security/MyCORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/security/MyCORSFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/security/UserPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/java/com/ubt/app/security/UserPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/UserDetails/MyUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/UserDetails/MyUserDetailsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/controllers/ApartmentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/controllers/ApartmentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/controllers/BookingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/controllers/BookingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/controllers/HostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/controllers/HostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/controllers/MediaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/controllers/MediaController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/controllers/OpenRequestsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/controllers/OpenRequestsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/jwt/JwtTokenVerifier.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/jwt/JwtTokenVerifier.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/jwt/JwtUsernameAndPasswordAuthAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/jwt/JwtUsernameAndPasswordAuthAuthenticationFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/security/AppSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/security/AppSecurityConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/security/AuthenticationEntryPoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/security/AuthenticationEntryPoint.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/security/MyCORSFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/security/MyCORSFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/target/classes/com/ubt/app/security/UserPrincipal.class" beforeDir="false" afterPath="$PROJECT_DIR$/web/target/classes/com/ubt/app/security/UserPrincipal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/web/web.iml" afterDir="false" />
-    </list>
+    <list default="true" id="ad91c44d-8b7e-469b-83fc-76128ec7b9d3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,18 +38,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1sgPTr3G160K0csIUQZLehhXuXH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -148,18 +76,6 @@
       </method>
     </configuration>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -192,11 +108,12 @@
       <workItem from="1631628038157" duration="15961000" />
       <workItem from="1631897754805" duration="2558000" />
       <workItem from="1632166996367" duration="6362000" />
+      <workItem from="1632184301229" duration="714000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="23" key="#Project_Structure" timestamp="1632177768490">

@@ -1,6 +1,7 @@
 package com.ubt.service;
 
 import com.ubt.model.Apartment;
+import com.ubt.model.Media;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.ubt.repository.ApartmentRepository;
@@ -30,12 +31,12 @@ public class ApartmentService {
 
         apartment.setHost(a.getHost());
         apartment.setLocation(a.getLocation());
-        apartment.setMedia(a.getMedia());
-        apartment.setTotal_price(a.getTotal_price());
+        apartment.setMediaList(a.getMediaList());
+        apartment.setApartment_name(a.getApartment_name());
+        apartment.setDescription(a.getDescription());
         apartment.setTotal_bedrooms(a.getTotal_bedrooms());
         apartment.setTotal_bathrooms(a.getTotal_bathrooms());
         apartment.setPrice_per_night(a.getPrice_per_night());
-        apartment.setNum_nights(a.getNum_nights());
         apartment.setHas_tv(a.isHas_tv());
         apartment.setHas_internet(a.isHas_internet());
         apartment.setHas_heating(a.isHas_heating());

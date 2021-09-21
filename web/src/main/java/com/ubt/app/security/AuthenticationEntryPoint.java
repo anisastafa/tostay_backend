@@ -21,7 +21,6 @@ public class AuthenticationEntryPoint extends BasicAuthenticationEntryPoint {
         writer.println();
     }
 
-
     @Override
     public void afterPropertiesSet() {
         setRealmName("DeveloperStack");

@@ -62,13 +62,8 @@ public class AppSecurityConfig extends WebSecurityConfigurerAdapter {
                 .addFilterAfter(new JwtTokenVerifier(), JwtUsernameAndPasswordAuthAuthenticationFilter.class)
                 .authorizeRequests()
                 .antMatchers("/", "/login", "/createHost", "/createUser", "/getAllApartments").permitAll()
-//                .antMatchers("/apartments/**", "/hosts/**", "/bookings/**", "/users/**"
-//                ).authenticated()
                 .antMatchers("/users/**", "/bookings/**").hasRole(USER.name())
                 .antMatchers("/hosts/**", "/apartments/**").hasRole(HOST.name()).anyRequest().authenticated()
-//                .antMatchers("users/**").hasAnyRole(USER.name(), HOST.name()).anyRequest().authenticated()
-//                .antMatchers(HttpMethod.GET,"/users/**").hasAuthority(USER_READ.getPermission())
-//                .antMatchers(HttpMethod.GET,"/hosts/**").hasAuthority(HOST_READ.getPermission())
                 .and()
                 .httpBasic().authenticationEntryPoint(authenticationEntryPoint);
     }

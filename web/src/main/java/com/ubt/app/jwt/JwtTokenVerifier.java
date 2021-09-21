@@ -27,8 +27,6 @@ import java.util.stream.Collectors;
 
 public class JwtTokenVerifier extends OncePerRequestFilter {
 
-
-
     @Override
     protected void doFilterInternal(
             HttpServletRequest request,
@@ -49,16 +47,12 @@ public class JwtTokenVerifier extends OncePerRequestFilter {
 
             Claims body = claimsJws.getBody();
             String username = body.getSubject();
-            System.out.println("claims body: "+body);
 
             var authorities = (List<Map<String, String>>) body.get("authorities");
-//            List<String> authorities1 = (List) body.get("authorities");
-            System.out.println("var authorities jwtTokenVerifier: "+authorities);
 
             Set<SimpleGrantedAuthority> simpleGrantedAuthoritySet = authorities.stream()
                     .map(m -> new SimpleGrantedAuthority(m.get("authority"))).collect(Collectors.toSet());
 
-            System.out.println("simpleGrantedAuthoritySet: "+simpleGrantedAuthoritySet);
 
             Authentication authentication = new UsernamePasswordAuthenticationToken(username,
                     null, simpleGrantedAuthoritySet);
@@ -68,6 +62,5 @@ public class JwtTokenVerifier extends OncePerRequestFilter {
             throw new IllegalStateException(String.format("Token %s cannot be trusted", token));
         }
         filterChain.doFilter(request, response);
-
     }
 }

@@ -29,7 +29,6 @@ public class MyUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        String lastDigits = username.substring(username.length() - 3);
         User user;
         Host host;
 
@@ -38,19 +37,6 @@ public class MyUserDetailsService implements UserDetailsService {
             if (host == null) {
                 throw new UsernameNotFoundException("Server 404");
             }
-//            return withUsername(host.getEmail()).password(host.getPassword())
-//                    .authorities(HOST.getGrantedAuthorities()).build();
-//            return new org.springframework.security.core.userdetails.User(
-//                    host.getEmail(), host.getPassword(), HOST.getGrantedAuthorities()
-//            );
-//            return builder()
-//                    .username(host.getEmail())
-//                    .password(host.getPassword())
-//                    .roles(HOST.name()) // ROLE_HOST
-//                    .build();
-//            return org.springframework.security.core.userdetails.User.withUsername(host.getEmail())
-//                    .password(host.getPassword())
-//                    .roles("HOST").build();
             return new HostPrincipal(host);
         }
         user = userRepository.findByUsername(username);
@@ -61,20 +47,6 @@ public class MyUserDetailsService implements UserDetailsService {
         System.out.println("user.password: "+user.getPassword());
         System.out.println("userDetailsService authorities of user: "+user.getUsername()+" " +
                 "these authorities: "+USER.getGrantedAuthorities());
-//        return withUsername(user.getUsername()).password(user.getPassword())
-//                .authorities(USER.getGrantedAuthorities()).build();
-//        return new org.springframework.security.core.userdetails.User
-//                (user.getUsername(), user.getPassword(), USER.getGrantedAuthorities());
-//        return builder()
-//                .username(user.getUsername())
-//                .password(user.getPassword())
-//                .roles(USER.name()) // ROLE_USER
-//                .build();
-//        return new org.springframework.security.core.userdetails.User(user.getUsername(),
-//                user.getPassword(), AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"));
-//        return org.springframework.security.core.userdetails.User.withUsername(user.getUsername())
-//                .password(user.getPassword())
-//                .roles("USER").build();
         return new UserPrincipal(user);
     }
 }

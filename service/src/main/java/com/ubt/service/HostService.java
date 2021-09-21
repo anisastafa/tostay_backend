@@ -42,6 +42,9 @@ public class HostService {
         host.setUuid(h.getUuid());
         host.setFirstname(h.getFirstname());
         host.setLastname(h.getLastname());
+        host.setDescription(h.getDescription());
+        host.setPhoneNumber(h.getPhoneNumber());
+        host.setHostMedia(h.getHostMedia());
         host.setPassword(passwordEncoder.encode(h.getPassword()));
         host.setUsername(h.getUsername());
         host.setEmail(h.getEmail());

@@ -1,12 +1,14 @@
 package com.ubt.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
@@ -31,7 +33,13 @@ public class Host {
     @Column(name = "lastname")
     private String lastname;
 
-    @Column(name = "username", unique = true)
+    @Column(name = "phone_number")
+    private Integer phoneNumber;
+
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "username")
     private String username;
 
     @Column(name = "password")
@@ -40,12 +48,10 @@ public class Host {
     @Column(name = "email", unique = true)
     private String email;
 
-
+    @JsonIgnore
     @OneToMany(mappedBy = "host", cascade = CascadeType.ALL)
     private List<Apartment> apartments;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "media_id")
-    private Media media;
-
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Media hostMedia;
 }

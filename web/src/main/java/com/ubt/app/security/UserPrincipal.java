@@ -8,11 +8,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.Collections;
-import java.util.EnumSet;
-import java.util.Set;
-import java.util.stream.Collectors;
-
-import static com.ubt.app.security.ApplicationUserRole.HOST;
 import static com.ubt.app.security.ApplicationUserRole.USER;
 
 public class UserPrincipal implements UserDetails {
@@ -29,11 +24,7 @@ public class UserPrincipal implements UserDetails {
         System.out.println("user.name() --- :" + USER.name());
         System.out.println("user.getPermissions() == :" + USER.getPermissions());
 
-//        Set<ApplicationUserRole> roles = EnumSet.noneOf(ApplicationUserRole.class);
-//        roles.add(USER);
-//        return roles;
         return Collections.singleton(new SimpleGrantedAuthority("ROLE_"+USER.name()));
-//            return AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_"+USER.name());
     }
 
     @Override

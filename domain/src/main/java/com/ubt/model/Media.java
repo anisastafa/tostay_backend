@@ -15,7 +15,7 @@ public class Media {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int media_ID;
+    private int media_id;
 
     @Column(name = "name")
     private String name;
@@ -27,7 +27,7 @@ public class Media {
     @Lob
     private byte[] pic;
 
-    public Media(String name, String mimeType, byte[] pic) {
+    public Media(String name, String mimeType, byte [] pic) {
         this.name = name;
         this.mimeType = mimeType;
         this.pic = pic;

@@ -46,7 +46,6 @@ public class UserService {
         user.setLastname(u.getLastname());
         user.setPassword(passwordEncoder.encode(u.getPassword()));
         user.setEmail(u.getEmail());
-        user.setMedia(u.getMedia());
         userRepository.save(user);
     }
 }

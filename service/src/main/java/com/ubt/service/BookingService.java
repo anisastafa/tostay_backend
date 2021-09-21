@@ -32,6 +32,8 @@ public class BookingService {
         booking.setApartment(b.getApartment());
         booking.setStart_date(b.getStart_date());
         booking.setEnd_date(b.getEnd_date());
+        booking.setNum_nights(b.getNum_nights());
+        booking.setTotal_price(b.getTotal_price());
 
         bookingRepository.save(booking);
     }

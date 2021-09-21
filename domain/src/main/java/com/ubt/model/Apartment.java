@@ -1,6 +1,5 @@
 package com.ubt.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,8 +18,7 @@ public class Apartment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int apartment_id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
     private Host host;
 
     @OneToMany(mappedBy = "apartment")
@@ -31,9 +29,14 @@ public class Apartment {
     @JoinColumn(name = "location_id")
     private Location location;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "media_id")
-    private Media media;
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<Media> mediaList;
+
+    @Column(name = "apartment_name")
+    private String apartment_name;
+
+    @Column(name = "description")
+    private String description;
 
     @Column(name = "total_bedrooms")
     private int total_bedrooms;
@@ -53,12 +56,7 @@ public class Apartment {
     @Column(name = "price_per_night")
     private double price_per_night;
 
-    @Column(name = "num_nights")
-    private int num_nights;
-
-    @Column(name = "total_price")
-    private double total_price;
-
     @Column(name = "booked")
     private Boolean booked;
+
 }

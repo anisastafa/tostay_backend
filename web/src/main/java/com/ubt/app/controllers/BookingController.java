@@ -12,6 +12,7 @@ import org.apache.tomcat.jni.Local;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -43,17 +44,16 @@ public class BookingController {
     @PostMapping(value = "/saveBooking/{apartment_id}/startDate/{start_date}/endDate/{end_date}",
             produces = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<?> saveBooking(@RequestBody Booking booking,
-                                         @PathVariable("start_date") LocalDate start_date,
-                                         @PathVariable("end_date") LocalDate end_date,
+                                         @PathVariable("start_date") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate start_date,
+                                         @PathVariable("end_date") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate end_date,
                                          @PathVariable("apartment_id") int apartment_id,
-//                                         UriComponentsBuilder uriCbuilder,
-                                         Principal principal){
+                                         Principal principal) {
         logger.info("Creating apartment: {}", booking);
 
-        if(bookingService.getById(booking.getApartment().getApartment_id()) == null){
-            logger.error("Apartment with id: "+booking.getBooking_ID()+" already exists.");
+        if (bookingService.getById(booking.getApartment().getApartment_id()) == null) {
+            logger.error("Apartment with id: " + booking.getBooking_ID() + " already exists.");
             return new ResponseEntity<>(new Utils("enable to create apartment with id"
-                    +booking.getBooking_ID()), HttpStatus.CONFLICT);
+                    + booking.getBooking_ID()), HttpStatus.CONFLICT);
         }
         String username = principal.getName();
         User user = userService.getByUsername(username);
@@ -66,18 +66,16 @@ public class BookingController {
 
         booking.setApartment(apartment);
         bookingService.save(booking);
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.setLocation(uriCbuilder.path("/api/Booking/{Booking_Id}").buildAndExpand(booking.getBooking_ID()).toUri());
         return new ResponseEntity<>(booking, HttpStatus.CREATED);
     }
 
     @GetMapping("/allBookings")
-    public ResponseEntity<List<Booking>> getAllBookings(Principal principal){
+    public ResponseEntity<List<Booking>> getAllBookings(Principal principal) {
         logger.info("List all the bookings");
         String username = principal.getName();
         User user = userService.getByUsername(username);
         List<Booking> bookings = user.getBookingList();
-        if(bookings.isEmpty()){
+        if (bookings.isEmpty()) {
             logger.info("There are no bookings");
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
@@ -85,10 +83,10 @@ public class BookingController {
     }
 
     @DeleteMapping("/deleteBooking/{id}")
-    public ResponseEntity<?> deleteBooking(@PathVariable("id") int id){
-        logger.info("Delete booking by id: "+id);
+    public ResponseEntity<?> deleteBooking(@PathVariable("id") int id) {
+        logger.info("Delete booking by id: " + id);
         Booking booking = bookingService.getById(id);
-        if(booking == null){
+        if (booking == null) {
             return new ResponseEntity<>("Booking doesnt exist or null value", HttpStatus.NOT_FOUND);
         }
         bookingService.deleteById(id);

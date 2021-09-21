@@ -39,4 +39,11 @@ public class Booking {
 
     @Column(name = "end_date", columnDefinition = "DATE")
     private LocalDate end_date;
+
+    @Column(name = "num_nights")
+    private int num_nights;
+
+    @Column(name = "total_price")
+    private double total_price;
+
 }

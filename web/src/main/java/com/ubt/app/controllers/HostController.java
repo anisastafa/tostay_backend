@@ -60,7 +60,6 @@ public class HostController {
     public ResponseEntity<?> updateById(@PathVariable("id") int id, @RequestBody Host host){
         logger.info("Updating user with id: {}", id);
         Host currHost = hostService.getById(id);
-        currHost.setMedia(host.getMedia());
         currHost.setFirstname(host.getFirstname());
         currHost.setLastname(host.getLastname());
         currHost.setUsername(host.getUsername());

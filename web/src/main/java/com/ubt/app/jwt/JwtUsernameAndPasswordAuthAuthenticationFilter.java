@@ -55,7 +55,7 @@ public class JwtUsernameAndPasswordAuthAuthenticationFilter extends UsernamePass
 
 //            UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
 //            System.out.println("userDetails.getAuthorities()-- : "+userDetails.getAuthorities());
-            List<GrantedAuthority> listRole = new ArrayList<>();
+//            List<GrantedAuthority> listRole = new ArrayList<>();
             Authentication authentication = new UsernamePasswordAuthenticationToken(
                     authenticationRequest.getUsername(),
                     authenticationRequest.getPassword()
@@ -78,31 +78,29 @@ public class JwtUsernameAndPasswordAuthAuthenticationFilter extends UsernamePass
         logger.info("Authorities: {}", authResult.getAuthorities());
         String key = "securesecuresecuresecuresecuresecuresecuresecuresecuresecuresecure";
 
-//        String token = Jwts.builder()
-//                .setSubject(authResult.getName())
-//                .claim("authorities", authResult.getAuthorities())
-//                .setIssuedAt(Date.valueOf(LocalDate.now().plusWeeks(2)))
-//                .signWith(Keys.hmacShaKeyFor(key.getBytes()))
-//                .compact();
-//
-
-//
-//        response.addHeader("Authorization", "Bearer " + token);
-        Map<String, Object> claims = new HashMap<>();
-        claims.put("authorities", authResult.getAuthorities());
-
         String token = Jwts.builder()
                 .setSubject(authResult.getName())
-                .setClaims(claims)
-//                .claim("authorities", authResult.getAuthorities())
+                .claim("authorities", authResult.getAuthorities())
                 .setIssuedAt(Date.valueOf(LocalDate.now().plusWeeks(2)))
                 .signWith(Keys.hmacShaKeyFor(key.getBytes()))
                 .compact();
 
-//        String authorities = new JSONObject()
-//                .put("authorities", authResult.getAuthorities())
-//                .toString();
-        System.out.println("claims: " +claims);
+
+//
+//        response.addHeader("Authorization", "Bearer " + token);
+//        Map<String, Object> claims = new HashMap<>();
+//        claims.put("authorities", authResult.getAuthorities());
+//
+//        String token = Jwts.builder()
+//                .setSubject(authResult.getName())
+//                .setClaims(claims)
+////                .claim("authorities", authResult.getAuthorities())
+//                .setIssuedAt(Date.valueOf(LocalDate.now().plusWeeks(2)))
+//                .signWith(Keys.hmacShaKeyFor(key.getBytes()))
+//                .compact();
+
+
+//        System.out.println("claims: " +claims);
         String tokenAsJson = new JSONObject()
                 .put("token", token)
                 .toString();
@@ -110,8 +108,6 @@ public class JwtUsernameAndPasswordAuthAuthenticationFilter extends UsernamePass
 
         response.setContentType("application/json");
         response.getWriter().write(tokenAsJson);
-//        response.getWriter().write(authorities);
         response.addHeader("Authorization", "Bearer " + token);
-//        response.addHeader("roles", authResult.getAuthorities().toString());
     }
 }
